@@ -1,0 +1,44 @@
+{
+  "name": "svelte-react-snippet",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.svelte.d.ts",
+      "default": "./dist/index.svelte.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "svelte",
+    "react",
+    "snippet"
+  ],
+  "author": "TOMIKAWA Sotaro",
+  "license": "MIT",
+  "description": "Create svelte snippets with JSX syntax based on react",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "svelte": "^5.0.0-next.223",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "svelte": "^5.0.0-next.223"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssssota/svelte-react-snippet.git"
+  },
+  "homepage": "https://ssssota.github.io/svelte-react-snippet/"
+}
