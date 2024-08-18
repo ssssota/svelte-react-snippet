@@ -15,9 +15,12 @@ export const createSnippet = <Params extends unknown[]>(
       render: () =>
         `<div style="display:contents">${renderToString(fn(...params))}</div>`,
       setup(element) {
+        let firstEffect = true;
         const root = hydrateRoot(element, fn(...params));
         $effect(() => {
-          root.render(fn(...params));
+          const node = fn(...params);
+          if (firstEffect) firstEffect = false;
+          else root.render(node);
         });
         return () => root.unmount();
       },
